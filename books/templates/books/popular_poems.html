@@ -1,0 +1,111 @@
+{% load static %}
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = 'stylesheet' type = 'text/css' href = {% static 'books/poet_style.css' %}>
+    <link rel="shortcut icon" href="{% static 'books/images/favicon.ico' %}" />
+    <title>Меню</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="content">
+         <div class = 'main_window'>
+            <div class = 'header'>
+               <a href="{% url 'main' %}"><img src="{% static '..\static\books\images\image.png' %}"/ class="header__logo"></a>
+               <div class = 'nametag'>Библиотека.ру</div>
+            </div>
+            <div class="head">
+               <div class="head__row">
+                  <div class="head__nav">
+                     <div class = 'head__element'>
+                        <form action = '{% url 'main' %}' method = 'post'>
+                        {% csrf_token %}
+                           <input type = 'submit' class = 'menu_button' id = 'menu_button' name = 'menu' value = 'Главная'></form>
+                     </div>
+                     <div class = 'head__element'>
+                        <form action = '{% url 'show_new' %}' method = 'post'>
+                           {% csrf_token %}
+                           <input type = 'submit' class = 'menu_button' id = 'menu_button' name = 'new' value = 'Список поэтов'>
+                        </form>
+                           <div class="head__drop_1">
+                              <form action = '{% url 'golden_century' %}' method = 'post'>
+                                 {% csrf_token %}
+                                 <input type = 'submit' class = 'menu_button' id = 'menu_button' name = 'new' value = 'Золотой век'>
+                              </form>
+                              <form action = '{% url 'silver_century' %}' method = 'post'>
+                                 {% csrf_token %}
+                                 <input type = 'submit' class = 'menu_button' id = 'menu_button' name = 'new' value = 'Серебряный век'>
+                              </form>
+                           </div>
+                     </div>
+                     <div class = 'head__element'>
+                        <form action = '{% url 'list_poems' %}' method = 'post'>
+                           {% csrf_token %}
+                           <input type = 'submit' class = 'menu_button' id = 'menu_button' name = 'popular' value = 'Список поэм'>
+                        </form>
+                           <div class="head__drop_2">
+                              <form action = '{% url 'show_popular' %}' method = 'post'>
+                                 {% csrf_token %}
+                                 <input type = 'submit' class = 'menu_button' id = 'menu_button' name = 'menu' value = 'Популярные'>
+                              </form>
+                              <form action = '{% url 'show_new' %}' method = 'post'>
+                                 {% csrf_token %}
+                                 <input type = 'submit' class = 'menu_button' id = 'menu_button' name = 'menu' value = 'Современные'>
+                              </form>
+                           </div>
+                     </div>
+                  </div>
+
+                  <div class="head__search">              
+                        <div class="d1">
+                           <form action = '{% url 'show_searched' %}' method = 'post'>
+                              {% csrf_token %}
+                              <input type="text" name = 'text' class="head_input" placeholder="Искать стихотворения...">
+                              <button type="submit"></button>
+                           </form>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+
+            <div class = 'header'>
+               <div class = 'header__title'>
+                  Список популярных поэм:
+               </div>
+            </div>
+            <div class="list">
+               <div class="list__column">
+                  {% if popular_poems %}
+                     <ol>
+                     {% for poem in popular_poems %}
+                     <li><a href = {% url 'display_poem' arg1=poem.id %}>{{poem.poem_name}}</a></li>
+                  {% endfor %}
+                  </ol>
+                  {% else %}
+                  <p  class="list__warning">Список популярных поэм пуст</p>
+                  {% endif %}
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class = 'footer'>Информация сайта:
+         <div class="footer__preferences">
+            <div class="footer__copyright">
+               © Библиотека.ру 2021-2022
+            </div>
+            <div class="footer__networks">
+               <a href = 'https://ok.ru/profile/541216679413'><img src = "{% static '..\static\books\images\ok.png' %}"/ class="footer__icon"></a>
+               <a href = 'https://vk.com/ilay_57'><img src = "{% static '..\static\books\images\vk.png' %}"/ class="footer__icon"></a>
+               <a href = 'https://www.instagram.com/'><img src = "{% static '..\static\books\images\insta2.png' %}"/ class="footer__icon"></a>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>

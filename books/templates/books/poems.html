@@ -1,0 +1,62 @@
+{% load static %}
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = 'stylesheet' type = 'text/css' href = {% static 'books/poet_style.css' %}>
+    <link rel="shortcut icon" href="{% static 'books/images/favicon.ico' %}" />
+    <title>{{poet_name}}</title>
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="content">
+        <div class = 'main_window'>
+            <div class = 'header-poem'>
+                <div class="header__image">
+                    {% if poet.photo %}
+                        <img src="{{ poet.photo.url }}" class='header__author'>
+                    {% else %}
+                        <img src = "{% static '..\static\books\images\promotion.jpg' %}"/ class="header__sample">
+                    {% endif %}
+                </div>
+                <div class = 'header__nametag'>
+                    <a href = {{URL}}><span class = 'new_font'>{{poet_name}}</span></a>: Список стихотворений
+                </div>
+            </div>
+
+            <div class="list-poems">
+                {% if list_poems %}
+                    <ol>
+                    {% for poem in list_poems %}
+                        <li><a href = {% url 'display_poem' arg1=poem.id %}>{{poem.poem_name}}</a></li>
+                    {% endfor %}
+                    </ol>
+                {% else %}
+                    <div class = 'big_text'><p>Список стихотворений пуст</p></div>
+            </div>    
+            {% endif %}
+            <form action = '{% url 'main' %}'>
+                <input type = 'image' class = 'back_but' id = 'back_but' value = 'Вернуться' src = "{% static '..\static\books\images\back_sign.png' %}">
+            </form>
+        </div>
+    </div>
+
+        <div class = 'footer'>Информация сайта:
+            <div class="footer__preferences">
+                <div class="footer__copyright">
+                    © Библиотека.ру 2021-2022
+                </div>
+                <div class="footer__networks">
+                    <a href = 'https://ok.ru/profile/541216679413'><img src = "{% static '..\static\books\images\ok.png' %}"/ class="footer__icon"></a>
+                    <a href = 'https://vk.com/ilay_57'><img src = "{% static '..\static\books\images\vk.png' %}"/ class="footer__icon"></a>
+                    <a href = 'https://www.instagram.com/'><img src = "{% static '..\static\books\images\insta2.png' %}"/ class="footer__icon"></a>
+                </div>
+            </div>
+        </div>
+
+</div>
+</body>

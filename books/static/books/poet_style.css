@@ -1,0 +1,796 @@
+/* COMMON SETTINGS */
+body {
+    padding: 0;
+    margin: 0;
+}
+
+form {
+    padding: 0;
+    margin: 0;
+}
+
+.main_window {
+    margin-top: 10px;
+    border: 1px solid lightgrey;
+    width: 75%;
+    min-height: 840px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    padding: 0 0 100px 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.header {
+    padding: 50px 0 0 0;
+    margin-left: 2em;
+    color: 103633;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.header-poem {
+    padding: 50px 0 0 0;
+    margin-left: 2em;
+    color: 103633;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.header-page {
+    padding: 50px 0 0 0;
+    margin-left: 2em;
+    color: 103633;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.poem__title {
+    font-size: 27px;
+    padding: 0 0 12px 22px;
+}
+
+.poem {
+    padding: 50px 0 0 0;
+    margin-left: 2em;
+    color: 103633;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.poem__text {
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.header__author {
+    width: 200px;
+    height: 270px;
+}
+
+.back {
+    padding: 35px 0 0 20px;
+}
+
+.rating {
+    padding: 35px 0 58px 0;
+}
+
+.comment__name {
+    font-size: 23px;
+}
+
+.comment__text {
+    padding: 20px 0 0 0;
+}
+
+.comment__author {
+    width: 300px;
+    height: 32px;
+    font-size: 22px;
+    padding: 0 0 0 12px;
+}
+
+.comment__content {
+    width: 400px;
+    height: 200px;
+    padding: 8px 0 0 3px;
+    font-size: 16px;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+p {
+    margin-left: 40px;
+    margin-top: 12px;
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+
+body {
+    background: white url('images/back.jpg');
+}
+
+a {
+    color: b04eed;
+    text-decoration: none;
+    font-family: Gill Sans, sans-serif;
+    font-size: 85%;
+    line-height: 25px;
+}
+
+a:hover{
+    color: f56767;
+}
+
+.head {
+    padding: 55px 0 0 54px;
+}
+
+.head__nav {
+    display: flex;
+}
+
+.head__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.head__search {
+    padding: 0 54px 0 0;
+}
+
+.header__logo {
+    width: 75px;
+    height: 75px;
+    transition: 0.03s ease;
+}
+
+.header__logo:hover {
+    transform: scale(1.15);
+}
+
+.header__title {
+    padding: 24px 0 0 0;
+}
+
+.head__element {
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+.head__drop_1 {
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    transition: 0.3s ease-in-out;
+    z-index: 10;
+}
+
+.head__drop_2 {
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    transition: 0.3s ease-in-out;
+    z-index: 10;
+}
+
+.head__element:hover .head__drop_1 {
+    transition: 0.3s ease-in;
+    display: block;
+}
+
+.head__element:hover .head__drop_2 {
+    transition: 0.3s ease-in;
+    display: block;
+}
+
+.list {
+    padding: 21px 0 60px 0;
+}
+
+.list-poems {
+    padding: 21px 0 60px 0;
+}
+
+.list__section {
+    display: flex;
+}
+
+.list__column_2 {
+    padding: 0 0 0 300px;
+}
+
+.list__warning {
+    font-size: 21px;
+    padding: 8px 0 0 5px;
+}
+
+.list__name {
+    padding: 12px 0 10px 62px;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.commentaries {
+    padding: 42px 0 30px 62px;
+}
+
+.commentaries__message {
+    font-size: 21px;
+    font-weight: bold;
+    padding: 21px 0 30px 40px;
+}
+
+.footer__icon {
+    width: 30px;
+    height: 30px;
+}
+
+.footer {
+    padding: 10px;
+    border: 6px solid #efede7;
+    text-align: center;
+    margin: -110px 0 0 0;
+    font-size: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 450px;
+    font-weight: 500;
+    text-shadow: 0px 0.4px 0px;
+    
+}
+
+.footer__preferences {
+    padding: 21px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__copyright {
+    font-size: 18px;
+    color: grey;
+}
+
+.image_but {
+    background-color: black;
+    border-radius: 50%;
+}
+
+.distance {
+    margin-bottom: 10px;
+}
+
+.new_font {
+    color: 9c95a1;
+}
+
+.new_font:hover {
+    color: 595759;
+}
+
+.big_text {
+    font-size: 140%;
+}
+
+ol {
+    list-style-type: none;
+    counter-reset: my-counter;
+}   
+
+
+li {
+    margin-bottom: 0.6em;
+    margin-left: 1em;
+    font-size: 145%;  
+    line-height: 30px;
+}
+
+:root {
+    my-counter: 0;
+}
+.is-big {
+    my-counter: 10;
+}
+
+
+.num-step {
+            counter-reset: mystep 30; 
+        }
+        .num-step  p {
+            counter-increment: mystep -10;
+        }
+        
+        .num-step p::before {
+            content: counter(mystep)'. ';
+        }   
+
+li:before {
+    counter-increment: my-counter;
+    content:counter(my-counter);
+    color: black;
+    background: #fff;
+    display: inline-block;
+    text-align: center;
+    margin-right: 15px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    outline: 2px solid #f81919;
+}
+
+.url {
+    color: lightgrey;
+}
+
+.footer__networks {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100px;
+    justify-content: space-between;
+}
+
+.footer__networks img:hover {
+    transform: scale(1.2);
+    transition: 0.2;
+}
+
+/* SINGULAR SETTINGS */
+.head__search {
+    font-size: 24px;
+}
+
+.head__input {
+    width: 325px;
+    height: 45px;
+    padding: 10px 0 0 8px;
+}   
+
+input {
+    padding: 10px 0 0 0;
+}
+
+form {
+    position: relative;
+}
+
+.d1 {background: #A3D0C3;}
+.d1 input {
+    position: relative;
+    width: 400px;
+    height: 45px;
+    padding: 0 0 0 10px;
+    border: 2px solid #ff3d3d;
+    outline: none;
+    background: #f7f2e5;
+    color: #0a0a0a;
+}
+.d1 button {
+  position: absolute; 
+  top: 0;
+  right: 0px;
+  width: 40px;
+  height: 45px;
+  border: none;
+  background: #ff3d3d;
+  cursor: pointer;
+  content: url("/static/books/images/loop.png");
+}
+
+.d1 button:before {
+    display: block;
+    content: url("/static/books/images/l8.png");
+    width: 5px;
+    height: 2px;
+    transform: scale(0.05);
+    filter: invert(0.92);
+    font-family: FontAwesome;
+    color: #F9F0DA;
+    z-index: 5;
+    margin: -13px 0 0 -1px;
+}
+
+.d1 button:hover::before {
+    transform: scale(0.055);
+    filter: invert(1);
+    width: 3px;
+    height: 0px;
+}
+
+.back_but {
+    width: 45px;
+    height: 45px;
+    border: 1px solid dde5ed;
+    margin-left: 100px;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+#submit_box {
+    position: relative;
+    width: 100%;
+    width: 49px;
+    height: 45px;
+    margin-top: -20px;
+    left: 0%;
+    top: 50%;
+    transform: translate(-10%, 35.5%);  
+}
+
+#submit_box:hover {
+    background: white url('C:\Users\���\Desktop\MyApp\My_Site\books\static\books\images\search_img_dark.png')
+}
+    
+.menu_button {
+    font-size: 15px;
+    width: 200px;
+    height: 45px;
+    border: none;
+    font-weight: 740;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    background: #fe4d4d;
+    box-shadow: 0 -1px #fe7a7a inset;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+
+
+.menu_button:hover {
+    background-color: #fa8a8a;
+    box-shadow: 0 -1px #fa8a8a inset;
+}
+
+.menu_button:active {
+    background-color: rgb(210, 78, 78);
+}
+
+.popular_button {
+    width: 200px;
+    height: 45px;
+    border: none;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 3px;
+    background: rgb(64,199,129);
+    box-shadow: 0 -1px rgb(53,167,110) inset;
+    transition: 0.2s;
+}
+
+.popular_button:hover {
+    background-color: rgb(53, 167, 110);
+}
+
+.popular_button:active {
+    background-color: rgb(33,147,90);
+}
+
+.error {
+    margin-left: 1em;
+    margin-top: 0.5em;
+    color: 103633;
+    font-weight: bold;
+    font-size: 140%;
+    margin-bottom: 1.5em;  
+}
+
+.bigshift {
+    margin-bottom: 225px;
+}
+
+.shift {
+    margin-bottom: 50px;
+}
+
+.minishift {
+    margin-bottom: 20px;
+}
+
+.header__nametag {
+    padding: 20px 0 0 0;
+    font-style: italic;
+    font-size: 22px;
+    margin: -1px 0 0 0;
+    cursor: default;
+}
+
+.nametag {
+    font-style: italic;
+    font-size: 22px;
+}
+
+.header__nametag::selection {
+    background: transparent;
+}
+
+.header__title {
+    font-size: 23px;
+
+}
+
+input[type='text'] {
+    padding: 2px;
+    font-size: 68%;    
+}
+
+.d1 input[type='text'] {
+    padding: 2px 2px 2px 8px;
+    font-size: 68%;    
+}
+
+input.src {
+    background: white url('C:\Users\���\Desktop\MyApp\My_Site\books\static\books\images\search_img.png');
+}
+
+input.src:hover {
+    background: white url('C:\Users\���\Desktop\MyApp\My_Site\books\static\books\images\search_img_dark.png');
+}
+
+
+@media (max-width: 1650px) {
+    .main_window {
+        width: 84%;
+    }
+}
+
+@media (max-width: 1400px) {
+    .main_window {
+        margin-top: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .main_window {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .list__column_2 {
+        padding: 0 0 0 165px;
+    }
+    
+    .d1 input {
+        width: 315px;
+    }
+
+    .menu_button {
+        font-size: 15px;
+        width: 175px;
+        height: 45px;
+    }
+
+    p {
+        font-size: 21px;
+        line-height: 25px;
+    }
+
+    .header-page {
+        padding: 30px 0 0 0;
+    }
+
+    .header {
+        padding: 30px 0 0 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .header, .header-page {
+        padding: 24px 0 0 0;
+    }
+
+    .head {
+        padding: 32px 0 0 54px;
+    }
+
+    .d1 input {
+        height: 40px;
+    }
+
+    .d1 button {
+        height: 40px;
+    }
+
+    .menu_button {
+        height: 40px;
+    }
+
+    .head__drop_1, .head__drop_2 {
+        top: 40px;
+    }
+
+    .head__row {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .head__search {
+        margin: 40px 0 0 0;
+    }
+
+    .list__name {
+        padding: 12px 0 10px 36px;
+    }
+
+    .header-page {
+        padding: 25px 0 0 0;
+        margin-left: 1.2em;
+    }
+
+    .list__column li {
+        margin-left: 0em;
+    }
+}
+
+@media (max-width: 900px) {
+    .list__column_2 {
+        padding: 0 0 0 105px;
+    }
+}
+
+@media (max-width: 800px) {
+    .list__section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .list__column_2 {
+        padding: 0;
+    }
+
+    .list__name {
+        padding: 35px 0 10px 36px;
+    }
+
+    .footer {
+        padding: 8px;
+        border: 4px solid #efede7;
+        font-size: 19px;
+        width: 375px;   
+    }
+}
+
+@media (max-width: 650px) {
+    .menu_button {
+        font-size: 15px;
+        width: 158px;
+        height: 40px;
+    }
+
+    .head {
+        padding: 32px 0 0 20px;
+    }
+
+    .header-page {
+        padding: 25px 0 0 0;
+        margin-left: 10px;
+    }
+
+    .header {
+        padding: 25px 0 0 0;
+        margin-left: 20px;
+    }
+
+    .d1 input {
+        width: 295px;
+    }
+
+    .list__column li {
+        margin-left: 0em;
+    }
+
+    .list__column {
+        margin: 0 0 0 -28px;
+    }
+
+    .list__section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .head__nav {
+        flex-wrap: wrap;
+    }
+    
+    li:before {
+        line-height: 27px;
+        width: 27px;
+        height: 27px;
+        margin-right: 12px;
+    }
+
+    li {
+        margin-bottom: 0.6em;
+        margin-left: 1em;
+        font-size: 138%;  
+        line-height: 27px;
+    }
+
+    .header-poem {
+        padding: 30px 0 0 0;
+        margin-left: 20px;
+        color: 103633;
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    .list-poems {
+        margin: 0 0 0 -32px;
+    }
+
+    .footer {
+        padding: 6px;
+        border: 3px solid #efede7;
+        font-size: 18px;
+        width: 300px;   
+    }
+
+    .poem__title {
+        font-size: 27px;
+        padding: 0 0 12px 0;
+    }
+
+    .poem {
+        padding: 30px 0 0 0;
+        margin-left: 20px;
+    }
+
+    p {
+        margin-left: 10px;
+        margin-top: 12px;
+        font-size: 21px;
+        margin-bottom: 18px;
+    }
+    
+    .back {
+        padding: 35px 0 0 0;
+    }
+
+    .commentaries {
+        padding: 42px 0 30px 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .d1 input {
+        width: 280px;
+    }
+
+    .head__search {
+        padding: 0 20px 0 0;
+    }
+
+    .menu_button {
+        font-size: 15px;
+        width: 140px;
+        height: 40px;
+    }
+
+    
+}
+
+@media (max-width: 500px) {
+    p {
+        margin-left: 8px;
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+}

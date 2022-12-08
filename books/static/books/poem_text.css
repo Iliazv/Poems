@@ -1,0 +1,298 @@
+textarea {
+    font-family: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+.main_window {
+    margin-top: 10px;
+    border: 1px solid lightgrey;
+    width: 75%;
+    min-height: 840px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    padding: 0 0 100px 0;
+}
+
+.header {
+    padding: 60px 0 10px 12px;
+    margin-left: 2em;
+    color: 103633;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.header__poem {
+    font-size: 21px;
+}
+
+.back_but {
+    width: 45px;
+    height: 45px;
+    border: 1px solid dde5ed;
+    margin-left: 60px;
+    margin-top: -25px;
+    margin-bottom: -15px;
+    font-size: 30px;
+}
+
+.text {
+    font-size: 100%;
+    padding: 0 0 25px 0;
+}
+
+.text_size_plus {
+    font-size: 100%;
+}
+
+body {
+    background: white url('images/back.jpg');
+}
+
+.shift {
+    margin-bottom: 100px;
+}
+
+.shift_com {
+    margin-bottom: 40px;
+}
+
+.center {
+    text-align: center;
+    color: 595757;
+    margin-left: 24px;
+    font-size: 130%;
+}
+
+.author_name {
+    color: b05151;
+    font-size: 127%;
+    font-style: bold;
+}
+
+.text_com {
+    font-size: 118%;
+    line-height: 25px;
+    margin-top: -6px;
+}
+
+.comment {
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid rgb(210, 210, 210);
+    width: 450px;
+}
+
+.comment__name  {
+    padding: 18px 0 0 0;
+}
+
+.comment__author {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 450px;
+    font-size: 18px;
+    font-weight: 100;
+    border-radius: 0 10px 10px 0;
+    border: 1px solid rgb(193, 193, 193);
+}
+
+.comment__author:focus {
+    border: 1px solid rgb(144, 144, 144);
+}
+
+.comment__content {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 450px;
+    font-size: 18px;
+    font-weight: 100;
+    border-radius: 0 10px 10px 0;
+    border: 1px solid rgb(193, 193, 193);
+}
+
+input[type='text'] {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+     padding: 0 0 0 8px;
+}
+
+textarea[type='text'] {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding: 7px 0 0 9px;
+}
+
+.date {
+    font-size: 97%;
+    color: 999393;
+    margin-top: -4px;
+    margin-left: 270px;
+}
+
+.button_com {
+    margin-top: 30px;
+}
+
+.sub_but {
+    margin: 20px 0 0 0;
+    width: 135px;
+    height: 32px;
+    font-size: 15px;
+    padding: 0;
+    border: 0px;
+    background-color: #44b5ae;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+}
+
+.sub_but:hover {
+    background-color: #3c9e97;
+}
+
+.rating-area {
+        overflow: hidden;
+        width: 190px;
+        margin: 0 auto;
+}
+.rating-area:not(:checked) > input {
+        display: none;
+}
+.rating-area:not(:checked) > label {
+        float: right;
+        width: 30px;
+        padding: 0px;
+        cursor: pointer;
+        font-size: 40px;
+        line-height: 50px;
+        color: lightgrey;
+        text-shadow: 1px 1px #bbb;
+        margin-left: 5px;
+}
+.rating-area:not(:checked) > label:before {
+        content: '★';
+}
+.rating-area > input:checked ~ label {
+        color: gold;
+        text-shadow: 4px 4px #c60;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+        color: gold;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+        color: gold;
+        text-shadow: 4px 4px goldenrod;
+}
+.rate-area > label:active {
+        position: relative;
+}
+
+.comment_form {
+    font-size: 140%;
+}
+
+.author {
+    width: 270px;
+    height: 36px;
+    font-size: 19px;    
+}
+
+.text_comment {
+    width: 360px;
+    height: 200px;
+    font-size: 22px;
+}
+
+@media (max-width: 1650px) {
+    .main_window {
+        width: 84%;
+    }
+}
+
+@media (max-width: 1400px) {
+    .main_window {
+        margin-top: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .poem__title {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 650px) {
+    .poem__title {
+        font-size: 23px;
+    }
+
+    .poem__text {
+        font-size: 21px;
+    }
+
+    .header {
+        padding: 60px 0 10px 12px;
+        margin-left: 12px;
+        color: 103633;
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    .comment {
+        width: 390px;
+    }
+
+    .comment__author {
+        width: 390px;
+    }
+
+    .comment__content {
+        width: 390px;
+    }
+
+    .date {
+        font-size: 97%;
+        color: 999393;
+        margin-top: -4px;
+        margin-left: 215px;
+    }
+    
+    .text {
+        font-size: 87%;
+        padding: 0 0 25px 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .poem__title {
+        font-size: 22px;
+    }
+
+    .comment {
+        width: 275px;
+    }
+
+    .comment__author {
+        width: 275px;
+    }
+
+    .comment__content {
+        width: 275px;
+    }
+
+    .date {
+        font-size: 97%;
+        margin-top: -4px;
+        margin-left: 115px;
+    }
+}

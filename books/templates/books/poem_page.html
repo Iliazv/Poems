@@ -1,0 +1,99 @@
+{% load static %}
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = 'stylesheet' type = 'text/css' href = {% static 'books/poet_style.css' %}>
+    <link rel = 'stylesheet' type = 'text/css' href = {% static 'books/poem_text.css' %}>
+    <link rel="shortcut icon" href="{% static 'books/images/favicon.ico' %}" />
+    <title>{{poem_name}}</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="main_window">
+                <div class="poem">
+                    <div class = 'poem__title'>{{poet_name}} — {{poem_name}}</div>
+                    <div class = 'poem__text'>{{text|linebreaks}}</div>
+                </div>
+
+                <div class="back">
+                    <form action = {% url 'main' %} method="post">
+                        {% csrf_token %}
+                        <input type = 'image' class = 'back_but' id = 'back_but' value = 'Назад' src = "{% static '..\static\books\images\back_sign.png' %}">
+                    </form>
+                </div>
+
+                <div class="rating">
+                    <form action = '{% url 'vote' arg1 %}' method = 'post'>
+                        {% csrf_token %}
+                        <div class="rating-area">
+                        <input type="submit" id="star-5" name="rating" value="5">
+                        <label for="star-5" title="Оценка «5»"></label>	
+                        <input type="submit" id="star-4" name="rating" value="4">
+                        <label for="star-4" title="Оценка «4»"></label>    
+                        <input type="submit" id="star-3" name="rating" value="3">
+                        <label for="star-3" title="Оценка «3»"></label>  
+                        <input type="submit" id="star-2" name="rating" value="2">
+                        <label for="star-2" title="Оценка «2»"></label>    
+                        <input type="submit" id="star-1" name="rating" value="1">
+                        <label for="star-1" title="Оценка «1»"></label>
+                    </form>
+                    <div class = 'center'>Средняя оценка - {{rank}}</div>
+                </div>
+
+                <div class = 'header'>
+                    <div class = 'text'>
+                        Отзывы к стихотворению:
+                    </div>
+                    <form action = '{% url 'create_comment' arg1 %}' method = 'post'>
+                    {% csrf_token %}
+                        <div class="comment__name">
+                            <input type = 'text' name='name_field' placeholder='Введите имя' class = 'comment__author'>
+                        </div>
+                        <div class="comment__text">
+                            <textarea type = 'text' name='text_field' placeholder='Отправьте комментарий' class = 'comment__content'></textarea><br>
+                        </div>
+                        <input type='submit' name = 'button_com' class ='sub_but' width = '200' value="Опубликовать">
+                    </form>
+                </div>
+
+                <div class = 'commentaries'>
+                    {% if list_commentaries %}
+                        {% for commentary in list_commentaries %}
+                        <div class="comment">
+                            <div class="outline">
+                                <div class = 'author_name'>{{commentary.name_author}}</div>
+                                <br>
+                                <div class = 'text_com'>{{commentary.comment}}</div>
+                                <br>
+                                <div class = 'date'>{{commentary.date}}</div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                            
+                    {% else %}
+                        <div class = 'commentaries__message'>Оставьте комментарий первым</div>
+                    {% endif %}
+                </div>    
+            </div>  
+        </div>
+
+        <div class = 'footer'>Информация сайта:
+            <div class="footer__preferences">
+                <div class="footer__copyright">
+                    © Библиотека.ру 2021-2022
+                </div>
+                <div class="footer__networks">
+                    <a href = 'https://ok.ru/profile/541216679413'><img src = "{% static '..\static\books\images\ok.png' %}"/ class="footer__icon"></a>
+                    <a href = 'https://vk.com/ilay_57'><img src = "{% static '..\static\books\images\vk.png' %}"/ class="footer__icon"></a>
+                    <a href = 'https://www.instagram.com/'><img src = "{% static '..\static\books\images\insta2.png' %}"/ class="footer__icon"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
